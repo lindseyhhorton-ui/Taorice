@@ -1,0 +1,283 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px 20px;
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcf7f, #4ecdc4, #a8e6cf);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientFlow 5s ease infinite;
+    text-shadow: 0 0 30px rgba(255, 107, 107, 0.5);
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #a8a8a8;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Section Styles */
+.flame-grid-section,
+.ai-resources-section {
+    margin-bottom: 80px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ff6b6b;
+    text-shadow: 0 0 20px rgba(255, 107, 107, 0.6);
+}
+
+.section-description {
+    text-align: center;
+    color: #b8b8b8;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* Grid Item Styles with Consistent Hover Effects */
+.grid-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 107, 107, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Neon Glow Effect on Hover */
+.grid-item:hover {
+    border-color: #ff6b6b;
+    box-shadow: 
+        0 0 20px rgba(255, 107, 107, 0.6),
+        0 0 40px rgba(255, 107, 107, 0.4),
+        0 0 60px rgba(255, 107, 107, 0.2),
+        0 10px 30px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 107, 107, 0.1);
+    /* Lifting Animation */
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* Glow pulse animation */
+.grid-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 107, 107, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.grid-item:hover::before {
+    opacity: 1;
+}
+
+/* Item Icon */
+.item-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover .item-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Item Title */
+.grid-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.grid-item:hover h3 {
+    color: #ff6b6b;
+    text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+/* Item Description */
+.grid-item p {
+    font-size: 1rem;
+    color: #c0c0c0;
+    transition: color 0.3s ease;
+}
+
+.grid-item:hover p {
+    color: #ffffff;
+}
+
+/* Different color variations for AI Resources */
+.ai-resources-section .grid-item {
+    border-color: rgba(78, 205, 196, 0.3);
+}
+
+.ai-resources-section .grid-item:hover {
+    border-color: #4ecdc4;
+    box-shadow: 
+        0 0 20px rgba(78, 205, 196, 0.6),
+        0 0 40px rgba(78, 205, 196, 0.4),
+        0 0 60px rgba(78, 205, 196, 0.2),
+        0 10px 30px rgba(0, 0, 0, 0.4);
+    background: rgba(78, 205, 196, 0.1);
+    /* Same lifting animation */
+    transform: translateY(-10px) scale(1.02);
+}
+
+.ai-resources-section .grid-item::before {
+    background: radial-gradient(circle, rgba(78, 205, 196, 0.1) 0%, transparent 70%);
+}
+
+.ai-resources-section .grid-item:hover h3 {
+    color: #4ecdc4;
+    text-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+}
+
+.ai-resources-section .section-title {
+    color: #4ecdc4;
+    text-shadow: 0 0 20px rgba(78, 205, 196, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+    }
+    
+    .grid-item {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Focus styles for accessibility */
+.grid-item:focus {
+    outline: 2px solid #ff6b6b;
+    outline-offset: 4px;
+}
+
+.ai-resources-section .grid-item:focus {
+    outline-color: #4ecdc4;
+}
+
+/* Animation for page load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.grid-item {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.grid-item:nth-child(1) { animation-delay: 0.1s; }
+.grid-item:nth-child(2) { animation-delay: 0.2s; }
+.grid-item:nth-child(3) { animation-delay: 0.3s; }
+.grid-item:nth-child(4) { animation-delay: 0.4s; }
+.grid-item:nth-child(5) { animation-delay: 0.5s; }
+.grid-item:nth-child(6) { animation-delay: 0.6s; }
+.grid-item:nth-child(7) { animation-delay: 0.7s; }
+.grid-item:nth-child(8) { animation-delay: 0.8s; }
+.grid-item:nth-child(9) { animation-delay: 0.9s; }
+.grid-item:nth-child(10) { animation-delay: 1s; }
+.grid-item:nth-child(11) { animation-delay: 1.1s; }
+.grid-item:nth-child(12) { animation-delay: 1.2s; }
