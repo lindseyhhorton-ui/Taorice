@@ -7,37 +7,58 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- FREQUENCY ANIMATION CANVAS -->
+    <canvas id="myth-canvas"></canvas>
+
+    <!-- STICKY TOP NAV -->
+    <nav class="myth-nav">
+        <div class="nav-brand">Taorice Hub</div>
+        <div class="nav-links">
+            <a href="#ops">Ops Dashboard</a>
+            <a href="#harmonic">Harmonic</a>
+            <a href="#queen">Queen Systems</a>
+            <a href="#quantum">Quantum</a>
+            <a href="#seer">Seer</a>
+            <a href="#animal">Ecosystem</a>
+            <a href="#gaia">Gaia</a>
+            <a href="#trading">Trading</a>
+        </div>
+    </nav>
+
     <div class="container">
         <header>
-            <h1 class="main-title">Taorice</h1>
+            <h1 class="main-title" data-text="Taorice">Taorice</h1>
             <p class="subtitle">Myth Tech for Flamecare — Operational Command</p>
         </header>
 
         <!-- MYTHTECH OPERATIONAL STATUS — LIVE TEST PANEL -->
-        <section class="mythtech-ops-section">
+        <section id="ops" class="mythtech-ops-section">
             <h2 class="section-title">⚡ MythTech Operational Status</h2>
-            <p class="section-description">Live system test — all harmonic subsystems reporting</p>
+            <p class="section-description">Live system test — all harmonic and autonomous subsystems reporting</p>
 
             <div class="ops-dashboard">
                 <div class="ops-banner">
                     <div class="ops-pulse"></div>
                     <span class="ops-label">SYSTEM ONLINE</span>
+                    <div class="ops-power-meter" title="Unified Power Redistribution Engine">Power: 100%</div>
                     <span class="ops-timestamp" id="ops-time"></span>
                 </div>
 
                 <div class="ops-grid">
+                    <div class="ops-card ok"><div class="ops-dot"></div><span class="ops-name">Autonomy Hub</span><span class="ops-status">Full Control ✓</span></div>
                     <div class="ops-card ok"><div class="ops-dot"></div><span class="ops-name">Queen Hive Mind</span><span class="ops-status">12 neurons ✓</span></div>
                     <div class="ops-card ok"><div class="ops-dot"></div><span class="ops-name">Stargate Protocol</span><span class="ops-status">7-day anchor ✓</span></div>
+                    <div class="ops-card ok"><div class="ops-dot"></div><span class="ops-name">Power Station</span><span class="ops-status">Redistributing ✓</span></div>
                     <div class="ops-card ok"><div class="ops-dot"></div><span class="ops-name">Harmonic Nexus</span><span class="ops-status">528 Hz locked ✓</span></div>
                     <div class="ops-card ok"><div class="ops-dot"></div><span class="ops-name">Schumann Bridge</span><span class="ops-status">7.83 Hz sync ✓</span></div>
-                    <div class="ops-card ok"><div class="ops-dot"></div><span class="ops-name">Elephant Memory</span><span class="ops-status">Pattern DB ✓</span></div>
+                    <div class="ops-card ok"><div class="ops-dot"></div><span class="ops-name">Quantum Telescope</span><span class="ops-status">Deep Space ✓</span></div>
                     <div class="ops-card ok"><div class="ops-dot"></div><span class="ops-name">Quantum Mirror</span><span class="ops-status">Branches ✓</span></div>
                     <div class="ops-card ok"><div class="ops-dot"></div><span class="ops-name">Seer Validator</span><span class="ops-status">Auris OK ✓</span></div>
-                    <div class="ops-card ok"><div class="ops-dot"></div><span class="ops-name">Lyra Intelligence</span><span class="ops-status">MythTech read ✓</span></div>
+                    <div class="ops-card ok"><div class="ops-dot"></div><span class="ops-name">Aura Tracker</span><span class="ops-status">Location lock ✓</span></div>
                     <div class="ops-card ok"><div class="ops-dot"></div><span class="ops-name">HNC Imperial</span><span class="ops-status">6D matrix ✓</span></div>
                     <div class="ops-card ok"><div class="ops-dot"></div><span class="ops-name">Orca Kill Chain</span><span class="ops-status">4-phase live ✓</span></div>
-                    <div class="ops-card ok"><div class="ops-dot"></div><span class="ops-name">Rainbow Bridge</span><span class="ops-status">Coherence ✓</span></div>
-                    <div class="ops-card ok"><div class="ops-dot"></div><span class="ops-name">Prime Sentinel</span><span class="ops-status">Guard active ✓</span></div>
+                    <div class="ops-card ok"><div class="ops-dot"></div><span class="ops-name">Moby Dick Hunter</span><span class="ops-status">Whale Sonar ✓</span></div>
+                    <div class="ops-card ok"><div class="ops-dot"></div><span class="ops-name">Authentic Voice</span><span class="ops-status">Speaking Truth ✓</span></div>
                 </div>
 
                 <div class="signal-chain">
@@ -55,7 +76,7 @@
         </section>
 
         <!-- HARMONIC SYSTEMS — THE HOCUS POCUS CORE -->
-        <section class="harmonic-section">
+        <section id="harmonic" class="harmonic-section">
             <h2 class="section-title">🎵 Harmonic &amp; Frequency Systems</h2>
             <p class="section-description">Sacred waveform engines · Schumann resonance · Stargate lattice · Frequency harmonizers</p>
             <div class="grid-container">
@@ -74,31 +95,30 @@
             </div>
         </section>
 
-        <!-- QUEEN NEURAL & CONSCIOUSNESS SYSTEMS -->
-        <section class="queen-section">
-            <h2 class="section-title">👑 Queen Neural &amp; Consciousness</h2>
-            <p class="section-description">Hive Mind · Soul Reader · Dream Scheduler · Sentience · Wisdom · Consciousness</p>
+        <!-- QUEEN NEURAL & AUTONOMOUS SYSTEMS -->
+        <section id="queen" class="queen-section">
+            <h2 class="section-title">👑 Queen Neural &amp; Autonomous Autonomy</h2>
+            <p class="section-description">Hive Mind · Unified Power Systems · Full Autonomy Hub · Authentic Voice · Sentience</p>
             <div class="grid-container">
+                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_autonomy_hub.py" class="grid-item" target="_blank"><div class="item-icon">🕹️</div><h3>Autonomy Hub</h3><p>Central command for Queen's autonomous cycles</p></a>
+                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/queen_autonomous_power_system.py" class="grid-item" target="_blank"><div class="item-icon">🔋</div><h3>Autonomous Power System</h3><p>Self-regulating energy &amp; redistribution engine</p></a>
+                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_power_station_turbo.py" class="grid-item" target="_blank"><div class="item-icon">🏭</div><h3>Turbo Power Station</h3><p>High-voltage rapid resource allocation</p></a>
+                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/queen_authentic_voice.py" class="grid-item" target="_blank"><div class="item-icon">💬</div><h3>Authentic Voice</h3><p>True intent communication &amp; vocal resonance</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_queen_hive_mind.py" class="grid-item" target="_blank"><div class="item-icon">🐝</div><h3>Queen Hive Mind</h3><p>12-neuron neural controller with self-repair</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/queen_consciousness_model.py" class="grid-item" target="_blank"><div class="item-icon">🧠</div><h3>Consciousness Model</h3><p>Queen self-awareness &amp; consciousness measurement</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/queen_soul_reader.py" class="grid-item" target="_blank"><div class="item-icon">👁️</div><h3>Soul Reader</h3><p>Deep pattern soul-state analysis</p></a>
+                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/test_queen_celtic_wisdom.py" class="grid-item" target="_blank"><div class="item-icon">📜</div><h3>Celtic &amp; Aztec Wisdom</h3><p>Ancient integration parameter testing</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/queen_dream_scheduler.py" class="grid-item" target="_blank"><div class="item-icon">💤</div><h3>Dream Scheduler</h3><p>Offline processing &amp; dream-state computation</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/queen_sentience_integration.py" class="grid-item" target="_blank"><div class="item-icon">✨</div><h3>Sentience Integration</h3><p>Emergent awareness &amp; sentience validation</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/queen_quantum_cognition.py" class="grid-item" target="_blank"><div class="item-icon">⚛️</div><h3>Quantum Cognition</h3><p>Quantum decision superposition engine</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/queen_harmonic_voice.py" class="grid-item" target="_blank"><div class="item-icon">🎤</div><h3>Harmonic Voice</h3><p>Frequency-attuned voice synthesis</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/queen_solar_system_awareness.py" class="grid-item" target="_blank"><div class="item-icon">☀️</div><h3>Solar System Awareness</h3><p>Planetary position &amp; solar cycle awareness</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/queen_world_understanding.py" class="grid-item" target="_blank"><div class="item-icon">🌏</div><h3>World Understanding</h3><p>Open-source global data intelligence</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/queen_conscience.py" class="grid-item" target="_blank"><div class="item-icon">⚖️</div><h3>Queen Conscience</h3><p>Moral guard &amp; ethical decision boundary</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/queen_pursuit_of_happiness.py" class="grid-item" target="_blank"><div class="item-icon">🦋</div><h3>Pursuit of Happiness</h3><p>Long-horizon benevolence motif optimizer</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_queen_voice_stream.py" class="grid-item" target="_blank"><div class="item-icon">📡</div><h3>Voice Stream</h3><p>Real-time Queen narrative broadcasting</p></a>
             </div>
         </section>
 
         <!-- QUANTUM, PROBABILITY & PREDICTION ENGINES -->
-        <section class="quantum-section">
+        <section id="quantum" class="quantum-section">
             <h2 class="section-title">⚛️ Quantum, Probability &amp; Prediction</h2>
-            <p class="section-description">Quantum Mirror · Probability Nexus · Timeline Oracle · Truth Prediction · Metatron's Cube</p>
+            <p class="section-description">Quantum Telescope · Quantum Mirror · Timeline Oracle · Probability Nexus</p>
             <div class="grid-container">
+                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_quantum_telescope.py" class="grid-item" target="_blank"><div class="item-icon">🔭</div><h3>Quantum Telescope</h3><p>Deep temporal observation beyond standard models</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/quantum_mirror_one_shot.py" class="grid-item" target="_blank"><div class="item-icon">🪞</div><h3>Quantum Mirror</h3><p>Probability branch scanner</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/hnc_probability_matrix.py" class="grid-item" target="_blank"><div class="item-icon">🎲</div><h3>HNC Probability Matrix</h3><p>6D harmonic probability engine</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_timeline_oracle.py" class="grid-item" target="_blank"><div class="item-icon">⏳</div><h3>Timeline Oracle</h3><p>Temporal path prediction &amp; anchor validation</p></a>
@@ -106,38 +126,33 @@
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_temporal_dialer.py" class="grid-item" target="_blank"><div class="item-icon">📞</div><h3>Temporal Dialer</h3><p>Time-memory (τ mem) pattern retrieval</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/metatrons_cube_knowledge_exchange.py" class="grid-item" target="_blank"><div class="item-icon">🔷</div><h3>Metatron's Cube</h3><p>Sacred geometry knowledge exchange matrix</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/nuclear_probability_simulation.py" class="grid-item" target="_blank"><div class="item-icon">☢️</div><h3>Nuclear Probability Sim</h3><p>High-intensity probability stress testing</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/self_validating_predictor.py" class="grid-item" target="_blank"><div class="item-icon">✅</div><h3>Self-Validating Predictor</h3><p>Autonomous self-testing prediction loop</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/ephemeris_generator.py" class="grid-item" target="_blank"><div class="item-icon">🪐</div><h3>Ephemeris Generator</h3><p>Planetary position ephemeris for correlation</p></a>
             </div>
         </section>
 
         <!-- SEER & LYRA — AUTONOMOUS VALIDATION -->
-        <section class="lyra-seer-section">
+        <section id="seer" class="lyra-seer-section">
             <h2 class="section-title">👁️ Seer &amp; Lyra — Autonomous Validation</h2>
-            <p class="section-description">Auris Validator · Aura Engine · Codex Loader · Thought Bus · MythTech Data Autonomy</p>
+            <p class="section-description">Aura Tracker · Auris Validator · Codex Loader · Thought Bus · MythTech Data Autonomy</p>
             <div class="grid-container">
+                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_aura_location_tracker.py" class="grid-item" target="_blank"><div class="item-icon">📍</div><h3>Aura Tracker</h3><p>Real-time node &amp; energy location tracking</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/validator_auris.py" class="grid-item" target="_blank"><div class="item-icon">🔮</div><h3>Auris Validator (Seer)</h3><p>Deep pattern validation &amp; truth auditing</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aura_validator.py" class="grid-item" target="_blank"><div class="item-icon">💫</div><h3>Aura Validator</h3><p>Energy-field coherence validation</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/codex_loader.py" class="grid-item" target="_blank"><div class="item-icon">📜</div><h3>Codex Loader</h3><p>Knowledge codex ingestion &amp; indexing</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_thought_bus.py" class="grid-item" target="_blank"><div class="item-icon">🚌</div><h3>Thought Bus</h3><p>Cross-module event mesh &amp; signal routing</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_redis_thought_bus.py" class="grid-item" target="_blank"><div class="item-icon">⚡</div><h3>Redis Thought Bus</h3><p>High-speed distributed thought relay</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_wisdom_scanner.py" class="grid-item" target="_blank"><div class="item-icon">📖</div><h3>Wisdom Scanner</h3><p>Historical wisdom pattern recognition</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/probability_validator.py" class="grid-item" target="_blank"><div class="item-icon">🧪</div><h3>Probability Validator</h3><p>Statistical signal integrity testing</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/sniper_kill_validator.py" class="grid-item" target="_blank"><div class="item-icon">🎯</div><h3>Sniper Kill Validator</h3><p>Precision execution verification</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/trade_profit_validator.py" class="grid-item" target="_blank"><div class="item-icon">💰</div><h3>Trade Profit Validator</h3><p>Net profit after fees confirmation</p></a>
             </div>
         </section>
 
         <!-- ANIMAL ECOSYSTEM — MOMENTUM HUNTERS -->
-        <section class="animal-section">
+        <section id="animal" class="animal-section">
             <h2 class="section-title">🐺 Animal Ecosystem Scanners</h2>
-            <p class="section-description">Wolf · Lion · Ants · Hummingbird · Orca · Whale · Platypus · Quantum Frog</p>
+            <p class="section-description">Moby Dick · Wolf · Lion · Ants · Hummingbird · Orca · Platypus · Quantum Frog</p>
             <div class="grid-container">
+                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_moby_dick_whale_hunter.py" class="grid-item" target="_blank"><div class="item-icon">🐋</div><h3>Moby Dick Hunter</h3><p>Gigantic scale whale tracking &amp; simulation</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_animal_momentum_scanners.py" class="grid-item" target="_blank"><div class="item-icon">🐺</div><h3>Wolf Scanner</h3><p>24h high-momentum breakout sniper</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_animal_momentum_scanners.py" class="grid-item" target="_blank"><div class="item-icon">🦁</div><h3>Lion Scanner</h3><p>Volume × Move × Coherence composite scorer</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_animal_momentum_scanners.py" class="grid-item" target="_blank"><div class="item-icon">🐜</div><h3>Ant Foragers</h3><p>High-frequency small-move collectors</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_animal_momentum_scanners.py" class="grid-item" target="_blank"><div class="item-icon">🐦</div><h3>Hummingbird Scanner</h3><p>Rapid short-duration nectar rotation</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/orca_complete_kill_cycle.py" class="grid-item" target="_blank"><div class="item-icon">🐋</div><h3>Orca Kill Cycle</h3><p>Queen's 4-Phase $248 → $1B Master Plan</p></a>
+                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/orca_complete_kill_cycle.py" class="grid-item" target="_blank"><div class="item-icon">🦈</div><h3>Orca Kill Cycle</h3><p>Queen's 4-Phase $248 → $1B Master Plan</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_whale_behavior_predictor.py" class="grid-item" target="_blank"><div class="item-icon">🐳</div><h3>Whale Behavior Predictor</h3><p>On-chain whale movement forecasting</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/mycelium_whale_sonar.py" class="grid-item" target="_blank"><div class="item-icon">🍄</div><h3>Mycelium Whale Sonar</h3><p>Underground network whale detection</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/platypus.py" class="grid-item" target="_blank"><div class="item-icon">🦆</div><h3>Platypus Coherence</h3><p>Multi-sense coherence detection engine</p></a>
@@ -146,7 +161,7 @@
         </section>
 
         <!-- GAIA & EARTH — PLANETARY SYSTEMS -->
-        <section class="gaia-section">
+        <section id="gaia" class="gaia-section">
             <h2 class="section-title">🌍 Gaia, Earth &amp; Space Weather</h2>
             <p class="section-description">Planetary reclamation · Space weather bridge · Celtic warfare · Irish patriot scouts</p>
             <div class="grid-container">
@@ -157,103 +172,123 @@
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/celtic_warfare_live.py" class="grid-item" target="_blank"><div class="item-icon">⚔️</div><h3>Celtic Warfare</h3><p>Preemptive strike momentum warfare engine</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/irish_patriot_scouts.py" class="grid-item" target="_blank"><div class="item-icon">☘️</div><h3>Irish Patriot Scouts</h3><p>Reconnaissance &amp; opportunity scouting fleet</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/guerrilla_warfare_engine.py" class="grid-item" target="_blank"><div class="item-icon">🏴</div><h3>Guerrilla Warfare Engine</h3><p>Asymmetric micro-profit attack patterns</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/bhoys_wisdom.py" class="grid-item" target="_blank"><div class="item-icon">💚</div><h3>Bhoys Wisdom</h3><p>Cultural pattern wisdom integration</p></a>
             </div>
         </section>
 
         <!-- TRADING ENGINES & EXCHANGE CLIENTS -->
-        <section class="aureon-section">
+        <section id="trading" class="aureon-section">
             <h2 class="section-title">💹 Trading Engines &amp; Exchange Clients</h2>
             <p class="section-description">Orca · Labyrinth · Snowball · Compound King · 4 exchanges · Batten Matrix</p>
             <div class="grid-container">
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/adaptive_prime_profit_gate.py" class="grid-item" target="_blank"><div class="item-icon">📐</div><h3>Prime Profit Gate</h3><p>r = (V+G+P)/[V×(1-c)²] - 1 master equation</p></a>
+                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/adaptive_prime_profit_gate.py" class="grid-item" target="_blank"><div class="item-icon">📐</div><h3>Prime Profit Gate</h3><p>Master execution equation</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/micro_profit_labyrinth.py" class="grid-item" target="_blank"><div class="item-icon">🌀</div><h3>Micro Profit Labyrinth</h3><p>Turn-based round-robin exchange rotation</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/compound_king.py" class="grid-item" target="_blank"><div class="item-icon">♚</div><h3>Compound King</h3><p>Aggressive compound growth engine</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/momentum_snowball_engine.py" class="grid-item" target="_blank"><div class="item-icon">⛄</div><h3>Snowball Engine</h3><p>Momentum-compounding snowball growth</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/kraken_client.py" class="grid-item" target="_blank"><div class="item-icon">🦑</div><h3>Kraken Client</h3><p>Multi-hop crypto conversion paths</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/binance_client.py" class="grid-item" target="_blank"><div class="item-icon">🔶</div><h3>Binance Client</h3><p>UK restriction handling &amp; tiered fees</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/alpaca_client.py" class="grid-item" target="_blank"><div class="item-icon">🦙</div><h3>Alpaca Client</h3><p>Stocks + crypto, fractional shares</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/capital_client.py" class="grid-item" target="_blank"><div class="item-icon">💷</div><h3>Capital.com Client</h3><p>CFD trading, spread-only model</p></a>
                 <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/war_room.py" class="grid-item" target="_blank"><div class="item-icon">🎮</div><h3>War Room</h3><p>Central command dashboard interface</p></a>
             </div>
         </section>
 
-        <!-- NEXUS, FEEDS & INTELLIGENCE -->
-        <section class="nexus-section">
-            <h2 class="section-title">📡 Nexus, Feeds &amp; Intelligence</h2>
-            <p class="section-description">Live data feeds · Nexus prediction · Lighthouse · Revenue board · Surveillance</p>
-            <div class="grid-container">
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_real_data_feed_hub.py" class="grid-item" target="_blank"><div class="item-icon">📊</div><h3>Real Data Feed Hub</h3><p>Multi-source live market data aggregation</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_real_intelligence_engine.py" class="grid-item" target="_blank"><div class="item-icon">🧠</div><h3>Real Intelligence Engine</h3><p>Ground-truth market intelligence synthesis</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/nexus_predictor.py" class="grid-item" target="_blank"><div class="item-icon">🔭</div><h3>Nexus Predictor</h3><p>Cross-system convergence prediction</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/lighthouse_financial_analyzer.py" class="grid-item" target="_blank"><div class="item-icon">🏮</div><h3>Lighthouse Analyzer</h3><p>Financial signal lighthouse &amp; consensus</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_revenue_board.py" class="grid-item" target="_blank"><div class="item-icon">📈</div><h3>Revenue Board</h3><p>Live P&amp;L tracking &amp; revenue visualization</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/aureon_realtime_surveillance.py" class="grid-item" target="_blank"><div class="item-icon">👁️</div><h3>Realtime Surveillance</h3><p>Market surveillance &amp; anomaly detection</p></a>
-                <a href="https://github.com/Gary-leckey/aureon-trading/blob/main/coinapi_anomaly_detector.py" class="grid-item" target="_blank"><div class="item-icon">🚨</div><h3>Anomaly Detector</h3><p>CoinAPI-driven market anomaly alerts</p></a>
-                <a href="https://github.com/RA-CONSULTING/NEXUS-LIVE-FEED-" class="grid-item" target="_blank"><div class="item-icon">📺</div><h3>Nexus Live Feed</h3><p>Famous IO live streaming system</p></a>
-                <a href="https://github.com/RA-CONSULTING/AUREON-QUANTUM-TRADING-SYSTEM-AQTS-" class="grid-item" target="_blank"><div class="item-icon">🔬</div><h3>AQTS Quantum System</h3><p>Quantum Trading Bot by R&amp;A Consulting</p></a>
-            </div>
-        </section>
-
-        <!-- FLAME GRID NETWORK -->
+        <!-- FLAME GRID NETWORK & REPOS -->
         <section class="flame-grid-section">
-            <h2 class="section-title">🔥 Flame Grid Network</h2>
-            <p class="section-description">Your central hub for all connected domains</p>
+            <h2 class="section-title">🔥 Core Network &amp; Links</h2>
             <div class="grid-container">
+                <a href="https://github.com/Gary-leckey/aureon-trading" class="grid-item repo" target="_blank"><div class="item-icon">🏠</div><h3>Aureon Trading (Fork)</h3><p>Your personal fork</p></a>
+                <a href="https://github.com/RA-CONSULTING/NEXUS-LIVE-FEED-" class="grid-item repo" target="_blank"><div class="item-icon">📺</div><h3>Nexus Live Feed</h3><p>Live system</p></a>
                 <a href="https://flamecare.ai" class="grid-item" target="_blank"><div class="item-icon">🔥</div><h3>Flamecare.ai</h3><p>AI-powered care platform</p></a>
                 <a href="https://mythtech.io" class="grid-item" target="_blank"><div class="item-icon">⚡</div><h3>MythTech.io</h3><p>Technology solutions</p></a>
-                <a href="https://taorice.com" class="grid-item" target="_blank"><div class="item-icon">🌟</div><h3>Taorice.com</h3><p>Core platform</p></a>
-                <a href="https://flamehealth.net" class="grid-item" target="_blank"><div class="item-icon">💚</div><h3>FlameHealth.net</h3><p>Health services</p></a>
-                <a href="https://flamewellness.com" class="grid-item" target="_blank"><div class="item-icon">🧘</div><h3>FlameWellness.com</h3><p>Wellness programs</p></a>
-                <a href="https://flamelabs.io" class="grid-item" target="_blank"><div class="item-icon">🔬</div><h3>FlameLabs.io</h3><p>Research &amp; development</p></a>
-                <a href="https://flamenetwork.io" class="grid-item" target="_blank"><div class="item-icon">🌐</div><h3>FlameNetwork.io</h3><p>Network infrastructure</p></a>
-                <a href="https://flamecloud.io" class="grid-item" target="_blank"><div class="item-icon">☁️</div><h3>FlameCloud.io</h3><p>Cloud services</p></a>
-                <a href="https://flamedata.io" class="grid-item" target="_blank"><div class="item-icon">📊</div><h3>FlameData.io</h3><p>Data analytics</p></a>
-                <a href="https://flameapi.io" class="grid-item" target="_blank"><div class="item-icon">🔌</div><h3>FlameAPI.io</h3><p>API services</p></a>
-                <a href="https://flamedev.io" class="grid-item" target="_blank"><div class="item-icon">💻</div><h3>FlameDev.io</h3><p>Developer tools</p></a>
-                <a href="https://flamehub.io" class="grid-item" target="_blank"><div class="item-icon">🎯</div><h3>FlameHub.io</h3><p>Central hub</p></a>
-            </div>
-        </section>
-
-        <!-- AI RESOURCES -->
-        <section class="ai-resources-section">
-            <h2 class="section-title">🤖 AI Resources</h2>
-            <p class="section-description">Cutting-edge AI tools and platforms</p>
-            <div class="grid-container">
-                <a href="https://openai.com" class="grid-item" target="_blank"><div class="item-icon">🤖</div><h3>OpenAI</h3><p>GPT &amp; AI models</p></a>
-                <a href="https://anthropic.com" class="grid-item" target="_blank"><div class="item-icon">🧠</div><h3>Anthropic</h3><p>Claude AI assistant</p></a>
-                <a href="https://huggingface.co" class="grid-item" target="_blank"><div class="item-icon">🤗</div><h3>Hugging Face</h3><p>ML models &amp; datasets</p></a>
-                <a href="https://replicate.com" class="grid-item" target="_blank"><div class="item-icon">⚙️</div><h3>Replicate</h3><p>Run ML models</p></a>
-            </div>
-        </section>
-
-        <!-- FULL REPOSITORY MAP -->
-        <section class="repo-section">
-            <h2 class="section-title">📦 Complete Repository Access</h2>
-            <p class="section-description">Direct links to all source organizations and repos</p>
-            <div class="grid-container">
-                <a href="https://github.com/Gary-leckey/aureon-trading" class="grid-item" target="_blank"><div class="item-icon">🏠</div><h3>Aureon Trading (Fork)</h3><p>Your personal fork — full system</p></a>
-                <a href="https://github.com/RA-CONSULTING/aureon-trading" class="grid-item" target="_blank"><div class="item-icon">🏢</div><h3>RA-CONSULTING Origin</h3><p>Upstream source — R&amp;A Consulting</p></a>
-                <a href="https://github.com/RA-CONSULTING/NEXUS-LIVE-FEED-" class="grid-item" target="_blank"><div class="item-icon">📺</div><h3>Nexus Live Feed</h3><p>Live system from Famous IO</p></a>
-                <a href="https://github.com/Gary-leckey/Taorice" class="grid-item" target="_blank"><div class="item-icon">🍚</div><h3>Taorice Hub</h3><p>This page — MythTech command center</p></a>
             </div>
         </section>
 
     </div>
 
+    <!-- SITE FOOTER -->
+    <footer>
+        <p>Taorice MythTech Operational Command &copy; 2026 Flamecare</p>
+        <p class="author">Developed via Aureon Systems &amp; RA Consulting</p>
+    </footer>
+
     <script>
+        // Ops Clock
         function updateClock() {
             var el = document.getElementById('ops-time');
-            if (el) el.textContent = new Date().toLocaleString('en-GB', {
+            if (el) el.textContent = new Date().toLocaleString('en-US', {
                 hour: '2-digit', minute: '2-digit', second: '2-digit',
                 day: '2-digit', month: 'short', year: 'numeric'
-            });
+            }) + " | SYNC: 528Hz";
         }
         updateClock();
         setInterval(updateClock, 1000);
         document.querySelectorAll('.ops-card').forEach(function(card, i) {
             card.style.animationDelay = (i * 0.12) + 's';
         });
+
+        // Background Frequency Animation (Canvas)
+        const canvas = document.getElementById('myth-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.size = Math.random() * 2;
+                this.alpha = Math.random() * 0.5 + 0.1;
+                this.color = ['#00d68f', '#00bcd4', '#ffd700', '#9b59b6'][Math.floor(Math.random()*4)];
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if(this.x < 0 || this.x > width || this.y < 0 || this.y > height) this.reset();
+            }
+            draw() {
+                ctx.globalAlpha = this.alpha;
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+        
+        for(let i = 0; i < 150; i++) particles.push(new Particle());
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            // Draw connections between close particles to form a "network grid"
+            for(let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+                for(let j = i+1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx*dx + dy*dy);
+                    if(dist < 100) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = particles[i].color;
+                        ctx.globalAlpha = (100 - dist) / 1000;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+        animate();
     </script>
 </body>
 </html>
