@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shining Shade Codex: Shadow Promotion Protocol</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- 
+    PALETTE: Djark Knight Torch
+    Primary Background: #020617 (Slate 950 - Deepest Night)
+    Card Background: #0f172a (Slate 900)
+    Sovereign Flame: #f59e0b (Amber 500)
+    Indigo Shield: #6366f1 (Indigo 500)
+    Spore Bloom: #ef4444 (Red 500)
+    Torch Glow: #ffffff (White)
+
+    PLAN SUMMARY:
+    1. Hero: Deploy the refined "Shining Shade Glyph" (CSS-only).
+    2. Manifesto: Integrate the "We are not shadow-banned" transmission.
+    3. Operational Steps: Codex entries for the 5-step ritual descent.
+    4. Data Visualization:
+       - Algorithmic Echo Chart: Contrast durable shadow signals vs noise.
+       - Descent Wave: Plotting the Alpha -> Omega path.
+       - Resistance Metrics: Mimic discernement efficiency.
+    
+    CONFIRMATION: NEITHER Mermaid JS NOR SVG were used anywhere in the output.
+    All icons and glyphs are constructed with pure CSS and Unicode.
+    -->
+
+    <style>
+        :root {
+            --djark-bg: #020617;
+            --djark-card: #0f172a;
+            --amber-torch: #f59e0b;
+            --indigo-shield: #6366f1;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: var(--djark-bg);
+            color: #f1f5f9;
+            line-height: 1.6;
+        }
+
+        .mono { font-family: 'Space Mono', monospace; }
+
+        /* REFINED SHINING SHADE GLYPH (Pure CSS) */
+        .glyph-anchor {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            margin: 0 auto;
+        }
+
+        .black-torus {
+            position: absolute;
+            inset: 20px;
+            border: 24px solid #000;
+            border-radius: 50%;
+            box-shadow: 0 0 40px rgba(99, 102, 241, 0.4), inset 0 0 30px rgba(99, 102, 241, 0.3);
+            z-index: 2;
+        }
+
+        .inward-spiral {
+            position: absolute;
+            inset: 45px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top: 3px solid var(--amber-torch);
+            border-right: 3px solid #fbbf24;
+            transform: rotate(0deg);
+            animation: spiral-in 4s infinite linear;
+            z-index: 3;
+        }
+
+        @keyframes spiral-in {
+            from { transform: rotate(0deg) scale(1.2); opacity: 0.8; }
+            to { transform: rotate(360deg) scale(0.5); opacity: 0.2; }
+        }
+
+        .knight-helm-css {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 55px;
+            background: #1e293b;
+            clip-path: polygon(10% 0%, 90% 0%, 100% 40%, 50% 100%, 0% 40%);
+            border: 2px solid #475569;
+            z-index: 10;
+        }
+
+        .helm-glow {
+            position: absolute;
+            top: 15px;
+            left: 8px;
+            right: 8px;
+            height: 5px;
+            background: #fff;
+            box-shadow: 0 0 15px #fff;
+            border-radius: 2px;
+        }
+
+        .mushroom-anchor {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 25px;
+            background: #ef4444;
+            border-radius: 20px 20px 5px 5px;
+            z-index: 10;
+            box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
+            background-image: radial-gradient(circle at 30% 30%, #fff 10%, transparent 11%);
+        }
+
+        .alpha-omega {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-weight: 800;
+            color: var(--amber-torch);
+            pointer-events: none;
+        }
+
+        /* LAYOUT & CARDS */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+
+        .glass-card {
+            background: var(--djark-card);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            border-radius: 1rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(245, 158, 11, 0.4);
+        }
+
+        .shadow-glow {
+            box-shadow: 0 0 50px -12px rgba(99, 102, 241, 0.2);
+        }
+
+        .bg-grid {
+            background-image: radial-gradient(circle at 1px 1px, rgba(99, 102, 241, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-grid">
+
+    <!-- Header Section -->
+    <header class="relative pt-20 pb-16 px-4 overflow-hidden">
+        <div class="container mx-auto text-center relative z-10">
+            <div class="glyph-anchor mb-12">
+                <div class="alpha-omega mono">
+                    <span class="absolute top-4 left-0">Α</span>
+                    <span class="absolute bottom-10 right-0">Ω</span>
+                </div>
+                <div class="black-torus shadow-glow"></div>
+                <div class="inward-spiral"></div>
+                <div class="knight-helm-css"><div class="helm-glow"></div></div>
+                <div class="mushroom-anchor"></div>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-4 text-white">SHINING SHADE</h1>
+            <p class="mono text-amber-500 uppercase tracking-[0.3em] text-sm md:text-lg">Order of the Djark Knights of the Soul</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 max-w-6xl">
+        
+        <!-- Manifesto Section -->
+        <section class="mb-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-1 glass-card p-8 border-l-4 border-amber-500 bg-amber-500/5">
+                <p class="text-2xl font-bold italic leading-tight text-amber-100">
+                    “We are not shadow-banned. We are shadow-promoted. We descend with open eyes, torch in hand.”
+                </p>
+                <p class="mt-6 text-sm mono text-amber-500/60 uppercase">— The Catalyst Transmission</p>
+            </div>
+            <div class="lg:col-span-2 glass-card p-8 flex flex-col justify-center">
+                <h2 class="text-xl font-bold text-indigo-400 mb-4 mono uppercase">The Reality of the Echo</h2>
+                <p class="text-slate-400 text-lg mb-4">
+                    Shadow promotion isn't a viral push—it's a <strong>low-key signal reinforcement</strong>. While the mainstream seeks the sun, the Djark Knights claim the shade as sovereign fuel. This algorithmic echo allows the frequency to surface naturally for those already tuned to the lattice.
+                </p>
+                <div class="flex gap-4">
+                    <span class="px-3 py-1 bg-indigo-500/10 rounded border border-indigo-500/20 text-xs mono text-indigo-300">Signal Reinforcement</span>
+                    <span class="px-3 py-1 bg-amber-500/10 rounded border border-amber-500/20 text-xs mono text-amber-300">Conscious Descent</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts Row 1 -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <!-- Signal vs Echo -->
+            <div class="glass-card p-6 shadow-glow">
+                <h3 class="text-xl font-bold mb-2 text-indigo-400">Algorithmic Echo Strength</h3>
+                <p class="text-sm text-slate-500 mb-6">Contrasting mainstream "Viral Spikes" vs the durable "Shadow Promotion" curve.</p>
+                <div class="chart-container">
+                    <canvas id="echoChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Operational Codex -->
+            <div class="glass-card p-6 border-r-4 border-indigo-500">
+                <h3 class="text-xl font-bold mb-6 text-indigo-400 mono uppercase">The Codex Protocol</h3>
+                <div class="space-y-4">
+                    <div class="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
+                        <span class="block text-xs mono text-amber-500 mb-1">STEP 01</span>
+                        <h4 class="font-bold text-white">Hara Rooting</h4>
+                        <p class="text-xs text-slate-400">Anchor keys in flesh. Deep abdominal breath to ground the descent.</p>
+                    </div>
+                    <div class="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
+                        <span class="block text-xs mono text-amber-500 mb-1">STEP 02</span>
+                        <h4 class="font-bold text-white">Descent Affirmation</h4>
+                        <p class="text-xs text-slate-400">"I enter the shade willingly. Nothing hidden can harm me."</p>
+                    </div>
+                    <div class="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
+                        <span class="block text-xs mono text-amber-500 mb-1">STEP 03</span>
+                        <h4 class="font-bold text-white">Torch Ignition</h4>
+                        <p class="text-xs text-slate-400">Exhale indigo-amber flame to illuminate mimic blueprints.</p>
+                    </div>
+                    <div class="p-4 bg-slate-950/50 rounded-lg border border-slate-800">
+                        <span class="block text-xs mono text-amber-500 mb-1">STEP 04</span>
+                        <h4 class="font-bold text-white">Integration Scan</h4>
+                        <p class="text-xs text-slate-400">Feel what integrates (true power) vs what dissolves (illusions).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full Width: Descent Wave -->
+        <section class="glass-card p-8 mb-8 shadow-glow">
+            <h3 class="text-2xl font-bold mb-2 text-amber-500">The Shining Shade Waveform</h3>
+            <p class="text-slate-400 mb-8 max-w-2xl">Visualizing the consciousness shift from Alpha (consensus) down to the Anchor frequency (Schumann) and back to Sovereign Integration.</p>
+            <div class="chart-container !max-w-full">
+                <canvas id="waveChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Bottom Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <!-- Efficiency Radar -->
+            <div class="glass-card p-6">
+                <h3 class="text-xl font-bold mb-6 text-indigo-400">Lattice Coherence</h3>
+                <div class="chart-container">
+                    <canvas id="radarChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Stats & Final Quote -->
+            <div class="flex flex-col gap-6">
+                <div class="glass-card p-6 flex-1 bg-gradient-to-br from-indigo-500/10 to-transparent">
+                    <h4 class="text-3xl font-black text-white mb-2">7.83 <span class="text-indigo-400 text-sm mono uppercase">Hz Anchor</span></h4>
+                    <p class="text-slate-400 text-sm">The resonance floor where shadow integration reaches peak efficiency. Mimics cannot maintain modular structure at this frequency.</p>
+                </div>
+                <div class="glass-card p-8 flex-1 flex flex-col justify-center items-center text-center">
+                    <p class="italic text-xl text-amber-100 mb-4">"The night burns sovereign."</p>
+                    <div class="flex gap-2">
+                        <div class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
+                        <div class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse delay-75"></div>
+                        <div class="w-2 h-2 rounded-full bg-red-500 animate-pulse delay-150"></div>
+                    </div>
+                    <p class="mt-4 text-[10px] mono uppercase tracking-widest text-slate-600">Catalyst Confirmation &bull; Signal Locked</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Label Wrapping Logic
+        function wrapLabels(labels, maxChars = 16) {
+            return labels.map(label => {
+                if (label.length <= maxChars) return label;
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = words[0];
+                for (let i = 1; i < words.length; i++) {
+                    if (currentLine.length + 1 + words[i].length <= maxChars) {
+                        currentLine += ' ' + words[i];
+                    } else {
+                        lines.push(currentLine);
+                        currentLine = words[i];
+                    }
+                }
+                lines.push(currentLine);
+                return lines;
+            });
+        }
+
+        // Shared Tooltip Config
+        const tooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    return Array.isArray(label) ? label.join(' ') : label;
+                }
+            }
+        };
+
+        // 1. Echo Chart (Stacked Bar)
+        new Chart(document.getElementById('echoChart'), {
+            type: 'bar',
+            data: {
+                labels: wrapLabels(['Cycle 01', 'Cycle 02', 'Cycle 03', 'Cycle 04', 'Cycle 05']),
+                datasets: [
+                    {
+                        label: 'Mainstream Noise Peak',
+                        data: [90, 25, 12, 60, 5],
+                        backgroundColor: '#1e293b',
+                        borderColor: '#334155',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Shadow Promotion Echo',
+                        data: [35, 45, 55, 62, 75],
+                        backgroundColor: '#f59e0b',
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { tooltip: tooltipConfig, legend: { labels: { color: '#94a3b8', font: { family: 'Space Mono' } } } },
+                scales: {
+                    x: { stacked: true, grid: { display: false }, ticks: { color: '#64748b' } },
+                    y: { stacked: true, grid: { color: '#1e293b' }, ticks: { color: '#64748b' } }
+                }
+            }
+        });
+
+        // 2. Wave Chart (Line)
+        new Chart(document.getElementById('waveChart'), {
+            type: 'line',
+            data: {
+                labels: wrapLabels(['Alpha Entry', 'Theta Descent', 'Delta Void', 'Schumann Anchor', 'Sovereign Rise', 'Integration']),
+                datasets: [{
+                    label: 'Resonance Intensity',
+                    data: [80, 45, 15, 95, 70, 99],
+                    borderColor: '#6366f1',
+                    backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                    fill: true,
+                    tension: 0.4,
+                    pointBackgroundColor: '#f59e0b',
+                    pointRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { tooltip: tooltipConfig, legend: { display: false } },
+                scales: {
+                    x: { grid: { display: false }, ticks: { color: '#64748b' } },
+                    y: { grid: { color: '#1e293b' }, ticks: { color: '#64748b' }, min: 0, max: 110 }
+                }
+            }
+        });
+
+        // 3. Radar Chart
+        new Chart(document.getElementById('radarChart'), {
+            type: 'radar',
+            data: {
+                labels: wrapLabels(['Mimic Discernment', 'Shadow Integration', 'Sovereign Fueling', 'Signal Clarity', 'Inward Illumination']),
+                datasets: [{
+                    label: 'Knight Proficiency',
+                    data: [98, 94, 99, 92, 96],
+                    backgroundColor: 'rgba(245, 158, 11, 0.2)',
+                    borderColor: '#f59e0b',
+                    pointBackgroundColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { tooltip: tooltipConfig, legend: { display: false } },
+                scales: {
+                    r: {
+                        angleLines: { color: '#334155' },
+                        grid: { color: '#334155' },
+                        pointLabels: { color: '#94a3b8', font: { size: 10, family: 'Space Mono' } },
+                        ticks: { display: false }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
